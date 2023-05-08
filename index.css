@@ -1,0 +1,287 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+}
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+  width: 100%;
+  color: var(--light-grayish-violet);
+  text-align: center;
+}
+.container {
+  display: flex;
+}
+.overlay-img {
+  width: auto;
+  height: 100vh;
+}
+.overlay-img-mobile {
+  display: none;
+}
+.card-holder-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 300px;
+}
+.card-holder-wrap form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+label {
+  color: var(--very-dark-violet);
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  margin-left: 4px;
+}
+input,
+select {
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid var(--light-grayish-violet);
+  margin-bottom: 5px;
+}
+.card-holder-wrap form input::placeholder,
+select {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  color: var(--dark-grayish-violet);
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.date-and-cvc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.date-div .month-year-wrap {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+/* .month-year-wrap div {
+  width: 1090%;
+} */
+.cvc-div input {
+  margin-top: 5px;
+}
+button {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  background: var(--very-dark-violet);
+  padding: 15px;
+}
+/* Card Front Image styles */
+.front-card-hold {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+.front-card-hold .card-front-info {
+  display: flex;
+  justify-content: space-between;
+}
+.front-card-hold p {
+  position: absolute;
+  top: 43%;
+  left: 10%;
+  letter-spacing: 4px;
+  font-size: 28px;
+  color: #fff;
+  font-weight: normal;
+}
+
+.front-card-hold .card-front-info p:first-child {
+  position: absolute;
+  top: 73%;
+  left: 10%;
+  letter-spacing: 1px;
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.front-card-hold .card-front-info p:last-child {
+  position: absolute;
+  top: 73%;
+  left: 79%;
+  letter-spacing: 1px;
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.front-card-logo {
+  top: 10%;
+  position: absolute;
+  left: 7%;
+}
+
+/* Card Back Styles */
+.card-holder-back {
+  position: absolute;
+  top: 48%;
+  left: 10%;
+}
+.card-holder-back p {
+  position: absolute;
+  top: 37%;
+  left: 79%;
+  letter-spacing: 2px;
+  color: #fff;
+  font-weight: normal;
+}
+
+.modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+}
+.hidden{
+  display: none;
+}
+.modal img {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.modal h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--very-dark-violet);
+  margin-top: 120px;
+  margin-bottom: 0;
+  text-align: center;
+}
+.modal p {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: var(--dark-grayish-violet);
+  text-align: center;
+}
+/* Mobile Design */
+@media (max-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .overlay-img-desktop {
+    display: none;
+  }
+  .overlay-img-mobile {
+    display: block;
+    width: auto;
+  }
+  .card-holder-wrap {
+    margin-top: 100px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .modal{
+    margin-top: 300px;
+  }
+  .front-card-hold {
+    position: absolute;
+    top: 21%;
+    left: 6%;
+    z-index: 10;
+  }
+  .front-card-logo {
+    top: 10%;
+    position: absolute;
+    left: 7%;
+    width: 60px;
+  }
+  .front-card-hold img:first-child {
+    width: 300px;
+  }
+  .card-holder-back img {
+    width: 300px;
+  }
+  .front-card-hold p {
+    position: absolute;
+    top: 43%;
+    left: 10%;
+    letter-spacing: 5px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: normal;
+  }
+  .front-card-hold .card-front-info p:first-child {
+    position: absolute;
+    top: 73%;
+    left: 10%;
+    letter-spacing: 1px;
+    font-size: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  .front-card-hold .card-front-info p:last-child {
+    position: absolute;
+    top: 71%;
+    left: 79%;
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  .card-holder-back {
+    position: absolute;
+    top: 7%;
+    left: 22%;
+    z-index: 1;
+  }
+
+  .card-holder-back p {
+    position: absolute;
+    top: 32%;
+    left: 77%;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: normal;
+  }
+}
+.error {
+  color: rgb(219, 53, 53);
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
